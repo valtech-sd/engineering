@@ -1,0 +1,4 @@
+permalink: /:title/
+collections:
+  prototypes:
+    output: true

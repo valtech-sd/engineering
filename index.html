@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Valtech_ Engineering</title>
-    <script type="text/javascript" src="index.js"></script>
-</head>
-<body>
-    <h1>Valtech_ Engineering</h1>
-    <ul class="prototypesContainer">
-    </ul>
-</body>
-</html>
+---
+title: Valtech_ Engineering
+layout: default
+---
+<ul>
+  {% for prototype in site.prototypes %}
+  <li>
+    <a href="{{ prototype.url }}">{{ prototype.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

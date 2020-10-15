@@ -1,22 +1,3 @@
-{
-  "prototypes": [
-    {
-      "name": "Remote Manipulation",
-      "description": "Scan a QR code to journey through the solar system. Control 3D models of the planets on a larger screen with your smartphone!",
-      "url": "https://touchless.valtech.engineering/qr/",
-      "media": {
-        "screenshot": "",
-        "screenshot_movie": "https://touchless.valtech.engineering/videos/touchless-qr.mp4"
-      }
-    },
-    {
-      "name": "Gaze Tracking",
-      "description": "Move your face to direct a cursor.",
-      "url": "https://touchless.valtech.engineering/gaze/",
-      "media": {
-        "screenshot": "",
-        "screenshot_movie": "https://touchless.valtech.engineering/videos/touchless-gaze.mp4"
-      }
-    }
-  ]
-}
+---
+---
+{{ site.posts | jsonify }}
