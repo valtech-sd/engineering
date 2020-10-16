@@ -2,11 +2,14 @@
 title: Valtech_ Engineering
 layout: default
 ---
-<ul>
+<div class="masonry-with-columns">
   {% for prototype in site.prototypes %}
-  <li>
-    <a href="{{ prototype.url }}">{{ prototype.title }}</a>
-    <img src="{{ prototype.screenshot }}">
-  </li>
+    <a href="{{ prototype.url }}">
+      <img src="{{ prototype.screenshot }}">
+      <div class="overlay">
+        <h2>{{ prototype.title }}</h2>
+        <p>{{ prototype.description }}</p>
+      </div>
+    </a>
   {% endfor %}
-</ul>
+  </div>
