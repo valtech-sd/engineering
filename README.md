@@ -46,6 +46,7 @@ prototype_url: "https://smelly.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/engineering"
 license: MIT
 screenshot: ""
+vimeo: ""
 demo: "https://smelly.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
 ---
@@ -53,7 +54,7 @@ category: "Enhanced Reality"
 
 **Required Fields:** layout, title, description, category, screenshot
 
-**Optional Fields:** prototype_url, repo_url, license, demo
+**Optional Fields:** prototype_url, repo_url, license, vimeo, demo
 
 3) Run Jekyll locally and make sure the site is rendering properly:
 

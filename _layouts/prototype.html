@@ -7,8 +7,14 @@ layout: default
 <p><a href="{{ page.prototype_url }}">Try it now!</a></p>
 
 Demo:
-<video controls>
-  <source src="{{ page.demo}} " type="video/mp4">
-</video>
+
+{% if page.vimeo %}
+  <br/>
+  <iframe src="{{ page.vimeo }}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+{% elsif page.demo %}
+  <video controls>
+    <source src="{{ page.demo}} " type="video/mp4">
+  </video>
+{% endif %}
 
 {{ content }}
