@@ -44,6 +44,7 @@ date: 2020-10-01
 description: "This prototype does the impossible and makes it possible for you to smell things over the Internet."
 prototype_url: "https://smelly.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/engineering"
+license: MIT
 screenshot: ""
 demo: "https://smelly.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
@@ -52,7 +53,7 @@ category: "Enhanced Reality"
 
 **Required Fields:** layout, title, description, category, screenshot
 
-**Optional Fields:** prototype_url, repo_url, demo
+**Optional Fields:** prototype_url, repo_url, license, demo
 
 3) Run Jekyll locally and make sure the site is rendering properly:
 

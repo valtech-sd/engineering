@@ -5,7 +5,8 @@ date: 2020-09-01
 description: "Move your face to direct a cursor."
 prototype_url: "https://touchless.valtech.engineering/gaze/"
 repo_url: "https://github.com/valtech-sd/touchless"
-screenshot: ""
+screenshot: "/images/gaze-tracking-screenshot.jpg"
+license: MIT
 demo: "https://touchless.valtech.engineering/videos/touchless-gaze.mp4"
 category: "Vision"
 ---
