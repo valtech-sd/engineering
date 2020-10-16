@@ -6,4 +6,5 @@ description: "Scan a QR code to journey through the solar system. Control 3D mod
 prototype_url: "https://touchless.valtech.engineering/qr/"
 screenshot: ""
 demo: "https://touchless.valtech.engineering/videos/touchless-qr.mp4"
+category: Touchless
 ---

@@ -6,4 +6,5 @@ description: "Move your face to direct a cursor."
 prototype_url: "https://touchless.valtech.engineering/gaze/"
 screenshot: ""
 demo: "https://touchless.valtech.engineering/videos/touchless-gaze.mp4"
+category: "Vision"
 ---

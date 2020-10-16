@@ -45,11 +45,19 @@ description: "This prototype does the impossible and makes it possible for you t
 prototype_url: "https://smelly.valtech.engineering"
 screenshot: ""
 demo: "https://smelly.valtech.engineering/images/demo.mp4"
+category: "Enhanced Reality"
 ---
 ```
+
+**Required Fields:** layout, title, description, category, screenshot
+**Optional Fields:** prototype_url, demo
 
 3) Run Jekyll locally and make sure the site is rendering properly:
 
 ```
 $ bundle exec jekyll serve
 ```
+
+## Demo Videos
+
+It's probably best if full demos are hosted on Vimeo and embedded
