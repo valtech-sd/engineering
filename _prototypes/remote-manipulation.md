@@ -9,4 +9,5 @@ license: MIT
 screenshot: "/images/remote-manipulation-screenshot.jpg"
 demo: "https://touchless.valtech.engineering/videos/touchless-qr.mp4"
 category: Touchless
+featured: 2
 ---

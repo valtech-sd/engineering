@@ -9,4 +9,5 @@ license: MIT
 screenshot: "https://spyglass.valtech.engineering/images/demo_poster.jpg"
 demo: "https://spyglass.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
+featured: 1
 ---

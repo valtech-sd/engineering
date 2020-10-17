@@ -3,7 +3,8 @@ title: Valtech_ Engineering
 layout: default
 ---
 <div class="masonry-with-columns">
-  {% for prototype in site.prototypes %}
+  {% assign prototypes = site.prototypes | sort: 'featured' | reverse %}
+  {% for prototype in prototypes %}
     <a href="{{ prototype.url }}">
       {% if prototype.screenshot %}
         <img src="{{ prototype.screenshot }}">
