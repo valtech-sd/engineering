@@ -24,6 +24,12 @@ To build the site and make it available on your local machine:
 $ bundle exec jekyll serve
 ```
 
+To build the site, make it available on your local machine, and have it auto reload your browser:
+
+```
+$ bundle exec jekyll serve -l
+```
+
 ## Adding New Prototypes
 
 Prototypes are stored as a [Jekyll Collection](https://jekyllrb.com/docs/collections/). To add a new prototype complete the following:
@@ -49,19 +55,20 @@ screenshot: ""
 vimeo: ""
 demo: "https://smelly.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
+featured: 1
 ---
 ```
 
 **Required Fields:** layout, title, description, category, screenshot
 
-**Optional Fields:** prototype_url, repo_url, license, vimeo, demo
+**Optional Fields:** prototype_url, repo_url, license, vimeo, demo, featured
+
+**featured:** To force a prototype to be at the top of the grid set the `featured` key to a number. The higher the number the earlier it will appear in the grid.
+
+**vimeo:** If you have a demo video that you would like to use talk to Matthew Morey about getting it on the official V_ Vimeo account.
 
 3) Run Jekyll locally and make sure the site is rendering properly:
 
 ```
 $ bundle exec jekyll serve
 ```
-
-## Demo Videos
-
-It's probably best if full demos are hosted on Vimeo and embedded

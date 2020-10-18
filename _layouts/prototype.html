@@ -2,19 +2,27 @@
 layout: default
 ---
 
-<p>{{ page.description }}</p>
+<div class="prototype">
+  <h2>{{ page.title }}</h2>
+  <p>{{ page.description }}</p>
+  <p><a href="{{ page.prototype_url }}">Try it now!</a></p>
 
-<p><a href="{{ page.prototype_url }}">Try it now!</a></p>
+  <h3>Demo:</h3>
 
-Demo:
+  {% if page.vimeo %}
+    <br/>
+    <iframe src="{{ page.vimeo }}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  {% elsif page.demo %}
+    <video controls>
+      <source src="{{ page.demo}} " type="video/mp4">
+    </video>
+  {% endif %}
 
-{% if page.vimeo %}
-  <br/>
-  <iframe src="{{ page.vimeo }}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-{% elsif page.demo %}
-  <video controls>
-    <source src="{{ page.demo}} " type="video/mp4">
-  </video>
-{% endif %}
+  {% if page.license == "MIT" or page.license == "mit" %}
+  <div>
+    <a href="{{ page.repo_url }}"><img src="/images/mit-badge.svg"></a>
+  </div>
+  {% endif %}
 
-{{ content }}
+  {{ content }}
+</div>

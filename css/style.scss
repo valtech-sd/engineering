@@ -3,13 +3,55 @@
 
 body {
   max-width: none;
+  font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.5;
+  -moz-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .site-header {
-  padding: 1rem 0 1rem 1rem;
   background: black;
   color: white;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+  }
+
+  li {
+    padding: 1rem;
+    font-size: 26px;
+  }
+}
+
+.intro {
+  margin: 1rem 6rem;
+
+  h2 {
+    font-size: 42px;
+    text-transform: uppercase; 
+  }
+
+  p {
+    font-size: 28px;
+    max-width: 1200px;
+  }
 }
 
 .masonry-with-columns {
@@ -113,4 +155,18 @@ body {
       }
     }
   }
+}
+
+.prototype {
+  margin: 0 auto;
+  max-width: 50em;
+
+    h2 {
+      font-size: 42px;
+      text-transform: uppercase; 
+    }
+
+    video {
+      max-width: 100%;
+    }
 }
