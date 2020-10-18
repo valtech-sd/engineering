@@ -51,8 +51,8 @@ description: "This prototype does the impossible and makes it possible for you t
 prototype_url: "https://smelly.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/engineering"
 license: MIT
-screenshot: ""
-vimeo: ""
+screenshot:
+vimeo:
 demo: "https://smelly.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
 featured: 1
