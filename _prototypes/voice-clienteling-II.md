@@ -7,7 +7,7 @@ prototype_url: "https://touchless.valtech.engineering/voice-fashion/"
 repo_url: "https://github.com/valtech-sd/touchless"
 screenshot: "/images/voice-clienteling-II-screenshot.jpg"
 license: MIT
-vimeo: ""
+vimeo:
 demo: "https://touchless.valtech.engineering/videos/touchless-voice-fashion.mp4"
 category: Voice
 ---

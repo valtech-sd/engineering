@@ -7,6 +7,6 @@ prototype_url:
 repo_url: "https://github.com/valtech-sd/amqp-cacoon"
 license: MIT
 screenshot: "/images/amqp-cacoon-screenshot.png"
-demo: ""
+demo:
 category: Library
 ---
