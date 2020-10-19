@@ -139,7 +139,7 @@ body {
       }
     }
 
-    &:hover {
+    &:hover, &:focus {
       & > h2 {
         opacity: 0;
         visibility: hidden;
