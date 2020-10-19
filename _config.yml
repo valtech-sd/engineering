@@ -2,3 +2,5 @@ permalink: /:title/
 collections:
   prototypes:
     output: true
+sass:
+  style: compressed

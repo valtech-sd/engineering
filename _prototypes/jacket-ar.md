@@ -6,7 +6,7 @@ description: "With modern smartphones it is now possible to deliver performant A
 prototype_url: "https://enhancedreality.valtech.engineering/jacket/#"
 repo_url: "https://github.com/valtech-sd/enhancedreality"
 license: MIT
-screenshot: "/images/jacket-ar-screenshot.png"
+screenshot: "/images/prototypes/jacket-ar.jpg"
 demo:
 category: "Enhanced Reality"
 ---

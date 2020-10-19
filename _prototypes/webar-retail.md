@@ -6,7 +6,7 @@ description: "With modern smartphones it is now possible to deliver performant A
 prototype_url: "https://webar.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/webar"
 license: MIT
-screenshot: "/images/webar-retail-demo-screenshot.png"
+screenshot: "/images/prototypes/webar-retail-demo.jpg"
 demo:
 category: "Enhanced Reality"
 ---

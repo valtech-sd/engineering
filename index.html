@@ -7,12 +7,18 @@ layout: default
   <p>Now, more than ever, is the time to start using our imagination as a guideline. The world is constantly evolving, and new possibilities arise endlessly to those who look for them. On this site you'll find all of the sketches, design ideas, proof of concepts, and working experiments we are exploring.</p>
 </section>
 
-<div class="masonry-with-columns">
+<div class="grid">
+  <div class="grid-col grid-col--1"></div>
+  <div class="grid-col grid-col--2"></div>
+  <div class="grid-col grid-col--3"></div>
+  <div class="grid-col grid-col--4"></div>
+
   {% assign prototypes = site.prototypes | sort: 'featured' | reverse %}
   {% for prototype in prototypes %}
-    <a href="{{ prototype.url }}">
+    <a class="grid-item" href="{{ prototype.url }}">
+      <span class="sr-only">{{ prototype.title }}</span>
       {% if prototype.screenshot %}
-        <img src="{{ prototype.screenshot }}">
+        <img src="{{ prototype.screenshot }}" alt="{{ prototype.title }} prototype">
       {% else %}
         <h2>{{ prototype.title }}</h2>
       {% endif %}

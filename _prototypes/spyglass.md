@@ -6,7 +6,7 @@ description: "Spyglass is a 3-week, augmented reality (AR) proof of concept (POC
 prototype_url: "https://spyglass.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/spyglass"
 license: MIT
-screenshot: "https://spyglass.valtech.engineering/images/demo_poster.jpg"
+screenshot: "/images/prototypes/spyglass.jpg"
 demo: "https://spyglass.valtech.engineering/images/demo.mp4"
 category: "Enhanced Reality"
 featured: 3
