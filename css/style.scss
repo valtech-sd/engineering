@@ -72,47 +72,72 @@ pre {
 }
 
 .site-header {
+  display: flex;
   background: black;
   color: white;
   margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding: 0 4%;
+  flex-direction: column;
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    a:visited {
-      color: white;
-      text-decoration: none;
-    }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
 
   ul {
     list-style-type: none;
     display: flex;
-    margin-left: auto;
+    margin: 0 0 1rem;
+    padding: 0;
+
+    @media (min-width: 640px) {
+      margin: 0;
+    }
   }
 
   li {
-    padding: 1rem;
-    font-size: 26px;
+    padding-right: 2rem;
+    font-size: 20px;
+
+    @media (min-width: 1200px) {
+      font-size: 26px;
+    }
   }
 }
 
 .intro {
-  margin: 1rem 6rem;
+  margin: 2rem 4%;
 
   h2 {
-    font-size: 42px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+      font-size: 34px;
+    }
   }
 
   p {
-    font-size: 28px;
-    max-width: 1200px;
+    max-width: 900px;
+
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      max-width: 1200px;
+    }
   }
 }
 
@@ -120,7 +145,11 @@ a.grid-item {
   position: relative;
   display: block;
   color: white;
-  margin-bottom: 2vw;
+  margin-bottom: 4%;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2vw;
+  }
 
   & > h2 {
     margin: 0;
@@ -204,7 +233,7 @@ a.grid-item {
 }
 
 .grid {
-  margin: 0 2%;
+  margin: 0 4%;
 }
 
 .grid:after {
