@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Now, more than ever, is the time to start using our imagination as a guideline. The world is constantly evolving, and new possibilities arise endlessly to those who look for them. On this site you'll find all of the sketches, design ideas, proof of concepts, and working experiments we are exploring.">
-    <meta name="keywords" content="engineering, research and development, prototypes, proof of concepts, poc, open source">
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
 
     <title>{{ page.title }}</title>
     
@@ -25,8 +29,8 @@
       {{ content }}
     </section>
 
-    <script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="/js/colcade.0.2.0.min.js"></script>
-    <script type="text/javascript" src="/js/grid.js"></script>
+    {% if page.scripts %}
+      {% include {{ page.scripts }} %}
+    {% endif %}
   </body>
 </html>
