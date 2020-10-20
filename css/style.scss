@@ -257,7 +257,8 @@ a.grid-item {
   min-height: 100px;
 }
 
-.grid-item img {
+.grid-item img,
+.grid-item video {
   display: block;
   width: 100%;
 }

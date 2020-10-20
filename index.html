@@ -17,7 +17,9 @@ layout: default
   {% for prototype in prototypes %}
     <a class="grid-item" href="{{ prototype.url }}">
       <span class="sr-only">{{ prototype.title }}</span>
-      {% if prototype.screenshot %}
+      {% if prototype.demo and prototype.screenshot %}
+        <video muted loop playsinline poster="{{ prototype.screenshot }}" src="{{ prototype.demo }}"></video>
+      {% elsif prototype.screenshot %}
         <img src="{{ prototype.screenshot }}" alt="{{ prototype.title }} prototype">
       {% else %}
         <h2>{{ prototype.title }}</h2>
@@ -28,4 +30,4 @@ layout: default
       </div>
     </a>
   {% endfor %}
-  </div>
+</div>
