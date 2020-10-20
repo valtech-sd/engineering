@@ -139,21 +139,59 @@ body {
       }
     }
 
-    &:hover, &:focus {
-      & > h2 {
-        opacity: 0;
-        visibility: hidden;
+    @media(hover: none) {
+      
+      &:focus {
+        pointer-events: none;
+        
+        & > h2 {
+          opacity: 0;
+          visibility: hidden;
+        }
+  
+        .overlay {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+  
+        img {
+          filter: saturate(20%);
+        }
+        
       }
-
-      .overlay {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      img {
-        filter: saturate(20%);
-      }
+      
     }
+
+    @media(hover: hover) {
+      
+      &:hover {
+        
+        & > h2 {
+          opacity: 0;
+          visibility: hidden;
+        }
+  
+        .overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+  
+        img {
+          filter: saturate(20%);
+        }
+        
+      }
+      
+    }
+
+    
+  }
+}
+
+@media(hover: hover) and (pointer: fine) {
+  nav a:hover {
+      background: yellow;
   }
 }
 

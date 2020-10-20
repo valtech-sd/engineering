@@ -10,7 +10,7 @@ layout: default
 <div class="masonry-with-columns">
   {% assign prototypes = site.prototypes | sort: 'featured' | reverse %}
   {% for prototype in prototypes %}
-    <a href="{{ prototype.url }}" ontouchend="touchEndHandle(event);">
+    <a href="{{ prototype.url }}">
       {% if prototype.screenshot %}
         <img src="{{ prototype.screenshot }}">
       {% else %}
