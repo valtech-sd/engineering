@@ -7,6 +7,7 @@ prototype_url: "https://enhancedreality.valtech.engineering/jacket/#"
 repo_url: "https://github.com/valtech-sd/enhancedreality"
 license: MIT
 screenshot: "/images/prototypes/jacket-ar.jpg"
+vimeo: "https://player.vimeo.com/video/470356743"
 demo:
 category: "Enhanced Reality"
 ---
