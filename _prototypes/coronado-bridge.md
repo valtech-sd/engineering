@@ -6,7 +6,7 @@ description: "Coronado Bridge is a simple general purpose router of all HTTP req
 prototype_url: 
 repo_url: "https://github.com/valtech-sd/coronado-bridge"
 license: MIT
-screenshot: "/images/coronado-bridge-screenshot.png"
+screenshot: "/images/prototypes/coronado_bridge.png"
 demo:
 category: Library
 ---

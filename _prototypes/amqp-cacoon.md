@@ -6,7 +6,7 @@ description: "This is a basic library to provide amqp support. Originally, this 
 prototype_url: 
 repo_url: "https://github.com/valtech-sd/amqp-cacoon"
 license: MIT
-screenshot: "/images/amqp-cacoon-screenshot.png"
+screenshot: "/images/prototypes/amqp_cacoon.png"
 demo:
 category: Library
 ---
