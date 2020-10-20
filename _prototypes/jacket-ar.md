@@ -9,5 +9,6 @@ license: MIT
 screenshot: "/images/prototypes/jacket-ar.jpg"
 vimeo: "https://player.vimeo.com/video/470356743"
 demo:
+grid_video: '/videos/grid/jacket-webar.mp4'
 category: "Enhanced Reality"
 ---
