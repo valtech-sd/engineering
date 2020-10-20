@@ -233,12 +233,6 @@ a.grid-item {
   }
 }
 
-@media(hover: hover) and (pointer: fine) {
-  nav a:hover {
-      background: yellow;
-  }
-}
-
 .prototype {
   margin: 0 auto;
   max-width: 50em;
