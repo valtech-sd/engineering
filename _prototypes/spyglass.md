@@ -8,6 +8,7 @@ repo_url: 'https://github.com/valtech-sd/spyglass'
 license: MIT
 screenshot: '/images/prototypes/spyglass.jpg'
 demo: '/videos/demo.mp4'
+grid_video: '/videos/grid/demo.mp4'
 category: 'Enhanced Reality'
 featured: 3
 ---

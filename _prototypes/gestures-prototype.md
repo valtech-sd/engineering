@@ -9,5 +9,6 @@ screenshot: '/images/prototypes/gestures-prototype.jpg'
 license: MIT
 vimeo: 'https://player.vimeo.com/video/465834953'
 demo: '/videos/touchless-hand.mp4'
+grid_video: '/videos/grid/touchless-hand.mp4'
 category: 'Vision'
 ---

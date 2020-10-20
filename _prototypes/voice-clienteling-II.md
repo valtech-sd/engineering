@@ -9,5 +9,6 @@ screenshot: '/images/prototypes/voice-clienteling-II.jpg'
 license: MIT
 vimeo:
 demo: '/videos/touchless-voice-fashion.mp4'
+grid_video: '/videos/grid/touchless-voice-fashion.mp4'
 category: Voice
 ---

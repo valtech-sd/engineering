@@ -9,5 +9,6 @@ screenshot: '/images/prototypes/swipe-prototype.jpg'
 license: MIT
 vimeo: 'https://player.vimeo.com/video/465834953'
 demo: '/videos/touchless-swipe.mp4'
+grid_video: '/videos/grid/touchless-swipe.mp4'
 category: 'Vision'
 ---

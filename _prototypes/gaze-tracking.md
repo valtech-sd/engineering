@@ -9,5 +9,6 @@ screenshot: '/images/prototypes/gaze-tracking.jpg'
 license: MIT
 vimeo: 'https://player.vimeo.com/video/465163760'
 demo: '/videos/touchless-gaze.mp4'
+grid_video: '/videos/grid/touchless-gaze.mp4'
 category: 'Vision'
 ---

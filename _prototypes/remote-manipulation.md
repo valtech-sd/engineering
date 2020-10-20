@@ -8,6 +8,7 @@ repo_url: 'https://github.com/valtech-sd/touchless'
 license: MIT
 screenshot: '/images/prototypes/remote-manipulation.jpg'
 demo: '/videos/touchless-qr.mp4'
+grid_video: '/videos/grid/touchless-qr.mp4'
 category: Touchless
 featured: 2
 ---

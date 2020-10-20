@@ -17,8 +17,8 @@ layout: default
   {% for prototype in prototypes %}
     <a class="grid-item" href="{{ prototype.url }}">
       <span class="sr-only">{{ prototype.title }}</span>
-      {% if prototype.demo and prototype.screenshot %}
-        <video muted loop playsinline poster="{{ prototype.screenshot }}" src="{{ prototype.demo }}"></video>
+      {% if prototype.grid_video and prototype.screenshot %}
+        <video muted loop playsinline poster="{{ prototype.screenshot }}" src="{{ prototype.grid_video }}"></video>
       {% elsif prototype.screenshot %}
         <img src="{{ prototype.screenshot }}" alt="{{ prototype.title }} prototype">
       {% else %}

@@ -9,6 +9,7 @@ screenshot: '/images/prototypes/way-finding.jpg'
 license: MIT
 vimeo: 'https://player.vimeo.com/video/465445895'
 demo: '/videos/touchless-voice.mp4'
+grid_video: '/videos/grid/touchless-voice.mp4'
 category: 'Voice'
 featured: 1
 ---
