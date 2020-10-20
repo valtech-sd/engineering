@@ -7,6 +7,7 @@ prototype_url: "https://webar.valtech.engineering"
 repo_url: "https://github.com/valtech-sd/webar"
 license: MIT
 screenshot: "/images/prototypes/webar-retail-demo.jpg"
+vimeo: "https://player.vimeo.com/video/470357941"
 demo:
 category: "Enhanced Reality"
 ---
