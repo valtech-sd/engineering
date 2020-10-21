@@ -3,12 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
     
+    <!-- facebook: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:type" content="website" /> 
+    <meta property="og:title" content="{{ page.title }}" />
+
+    <!-- twitter: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary -->
+    <meta name="twitter:card" content="summary_large_image" /> 
+    <meta name="twitter:site" content="@valtech" /> 
+    <meta name="twitter:creator" content="@valtech" /> 
+    <meta name="twitter:title" content="{{ page.title }}" />
+
     {% if page.description %}
       <meta name="description" content="{{ page.description }}">
+      <meta property="og:description" content="{{ page.description }}" /> 
+      <meta name="twitter:description" content="{{ page.description }}" /> 
     {% endif %}
+
     {% if page.keywords %}
       <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+
+    {% if page.screenshot %}
+    <meta property="og:image" content="{{ page.screenshot | absolute_url }}" /> 
+    <meta name="twitter:image" content="{{ page.screenshot | absolute_url }}" />
+    <meta name="twitter:image:alt" content="{{ page.title }}" />
     {% endif %}
 
     <title>{{ page.title }}</title>
