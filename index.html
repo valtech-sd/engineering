@@ -19,7 +19,7 @@ scripts: "grid_scripts.html"
 
   {% assign prototypes = site.prototypes | sort: 'featured' | reverse %}
   {% for prototype in prototypes %}
-    <a class="grid-item" href="{{ prototype.url }}">
+    <a class="grid-item" href="{{ prototype.url }}" tabindex="0">
       <span class="sr-only">{{ prototype.title }}</span>
       {% if prototype.grid_video and prototype.screenshot %}
         <video muted loop playsinline poster="{{ prototype.screenshot }}" src="{{ prototype.grid_video }}"></video>
