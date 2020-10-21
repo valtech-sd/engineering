@@ -67,6 +67,8 @@ featured: 1
 
 **vimeo:** If you have a demo video that you would like to use talk to Matthew Morey about getting it on the official V_ Vimeo account.
 
+**grid video:** To encode a video file for the grid, use [Handbrake](https://handbrake.fr/downloads.php) or something similar.  For settings, use "Fast 480p30" (or something similar) for video and remove all audio streams.
+
 3) Run Jekyll locally and make sure the site is rendering properly:
 
 ```

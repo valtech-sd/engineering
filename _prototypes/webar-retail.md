@@ -9,5 +9,6 @@ license: MIT
 screenshot: "/images/prototypes/webar-retail-demo.jpg"
 vimeo: "https://player.vimeo.com/video/470357941"
 demo:
+grid_video: '/videos/grid/webar-retail.mp4'
 category: "Enhanced Reality"
 ---
