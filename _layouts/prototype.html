@@ -5,7 +5,10 @@ layout: default
 <div class="prototype">
   <h2>{{ page.title }}</h2>
   <p>{{ page.description }}</p>
-  <p><a href="{{ page.prototype_url }}">Try it now!</a></p>
+  
+  {% if page.prototype_url %}
+    <p><a href="{{ page.prototype_url }}">Try it now!</a></p>
+  {% endif %}
 
   {% if page.vimeo %}
     <h3>Demo:</h3>
@@ -16,12 +19,20 @@ layout: default
     <video controls>
       <source src="{{ page.demo }} " type="video/mp4">
     </video>
+  {% elsif page.screenshot %}
+    <img src="{{ page.screenshot }}" />
+  {% endif %}
+
+  {% if page.repo_url %}
+    <div>
+      <h3>Repo:</h3><a href="{{ page.repo_url }}">{{ page.repo_url }}</a>
+    </div>
   {% endif %}
 
   {% if page.license == "MIT" or page.license == "mit" %}
-  <div>
-    <a href="{{ page.repo_url }}"><img src="/images/mit-badge.svg"></a>
-  </div>
+    <div>
+      <h3>License:</h3><a href="{{ page.repo_url }}"><img src="/images/mit-badge.svg"></a>
+    </div>
   {% endif %}
 
   {{ content }}
