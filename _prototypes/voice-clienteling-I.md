@@ -7,7 +7,7 @@ prototype_url: 'https://touchless.valtech.engineering/voice-clienteling/'
 repo_url: 'https://github.com/valtech-sd/touchless'
 screenshot: '/images/prototypes/voice-clienteling-I.jpg'
 license: MIT
-vimeo: 'https://player.vimeo.com/video/465164585'
+vimeo: 'https://player.vimeo.com/video/473614631'
 demo: '/videos/touchless-voice-clienteling.mp4'
 grid_video: '/videos/grid/touchless-voice-clienteling.mp4'
 category: Voice
