@@ -323,3 +323,43 @@ a.grid-item {
   display: block;
   width: 100%;
 }
+
+.Cookiepopupbox {
+  background-color: black;
+  position: fixed;
+  bottom: 0%;
+  z-index: 20;
+  width: 100%;
+  text-align: left;
+  padding: 1% 6%;
+  left: 0px;
+}
+.adapc {
+  font-size: 16px;
+  color: white !important;
+  letter-spacing: 0;
+}
+.cookiepopup{
+  display: block; 
+  border: 1px solid;
+}
+.acceptbtn{
+  margin-left:1%; 
+  color: white;  
+  border: solid 2px white;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.privlink{
+  color: #00c8ff;
+  text-decoration: underline;
+  }
