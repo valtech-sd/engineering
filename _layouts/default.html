@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="/css/sanitize.12.0.1.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
 
-  {% if site.google_analytics and jekyll.environment != 'production' %}
+  {% if site.google_analytics and site.environment == 'production' %}
    {% include analytics.html %} 
   {% endif %}
 </head>

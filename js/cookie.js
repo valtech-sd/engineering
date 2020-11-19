@@ -1,9 +1,9 @@
 function setCookie(e) {
 	if(e === 'true'){
-     // var d = new Date();
-      //d.setTime(d.getTime() + (exdays*24000*60*60*1000));
-      //var expires = "expires="+d.toUTCString();
-      document.cookie = "valtech_accept" + "=" + e + "; " + "expires= 03 Dec 2099 23:59:00";  
+      var d = new Date();     
+      d.setFullYear(d.getFullYear() + 2);
+      var expires = "expires="+d.toUTCString();
+      document.cookie = "V_Innovation_accept" + "=" + e + "; " + expires;  
 	}
 	 document.getElementById("cookiewrapper").style.display = "none";
 }
@@ -19,7 +19,7 @@ function getCookie(cname) {
 }
 
 function checkCookies() {  
-  var c = getCookie('valtech_accept');
+  var c = getCookie('V_Innovation_accept');
   if(c){	 
 	  document.getElementById("cookiewrapper").style.display = "none";
   }
