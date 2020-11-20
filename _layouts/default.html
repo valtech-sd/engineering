@@ -75,6 +75,7 @@
     </div>
   </div>
   {% if page.scripts %} {% include {{ page.scripts }} %} {% endif %}
+  <input type="hidden" value="{{site.environment}}" id="site-env"/>
 </body>
 
 </html>

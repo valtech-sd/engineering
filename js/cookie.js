@@ -28,6 +28,8 @@ function checkCookies() {
 }
 
 function createMarketoGAScript(){
+  var env = document.getElementById("site-env").value;
+  if(env !=null && env == 'production'){
     var script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=UA-97923818-10";
     script.async=true;
@@ -42,4 +44,5 @@ function createMarketoGAScript(){
     var script = document.createElement('script');
     script.innerHTML = marketo;
     document.head.appendChild(script);
+  }    
 }
