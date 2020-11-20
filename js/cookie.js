@@ -4,7 +4,7 @@ function setCookie(e) {
     var d = new Date();     
     d.setFullYear(d.getFullYear() + 2);
     var expires = "expires="+d.toUTCString();
-    document.cookie = "V_Innovation_accept" + "=" + e + "; " + expires;  
+    document.cookie = "V_Innovation_accept" + "=" + e +"; path=/" +  "; " + expires;  
 	}
 	 document.getElementById("cookiewrapper").style.display = "none";
 }
