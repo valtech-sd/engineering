@@ -1,5 +1,5 @@
 function setCookie(e) {
-	if(e === 'false'){
+	if(e === 'true'){
     var script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=UA-97923818-10";
     script.async=true;
