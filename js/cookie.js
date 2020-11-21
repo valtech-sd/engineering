@@ -22,8 +22,9 @@ function getCookie(cname) {
 function checkCookies() {  
   var c = getCookie('V_Innovation_accept');
   if(c){
-    createMarketoGAScript();
-    document.getElementById("cookiewrapper").style.display = "none";
+    createMarketoGAScript();    
+  }else{
+    document.getElementById("cookiewrapper").style.display = "block";
   }
 }
 
