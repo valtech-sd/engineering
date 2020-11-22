@@ -4,5 +4,4 @@ collections:
     output: true
 sass:
   style: compressed
-google_analytics: UA-97923818-10
-environment: test
+environment: production
