@@ -4,4 +4,4 @@ collections:
     output: true
 sass:
   style: compressed
-environment: production
+environment: dev
