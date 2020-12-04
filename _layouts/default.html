@@ -28,9 +28,13 @@
   <meta name="description" content="{{ page.description }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta name="twitter:description" content="{{ page.description }}" />
-  {% endif %} {% if page.keywords %}
+  {% endif %} 
+  
+  {% if page.keywords %}
   <meta name="keywords" content="{{ page.keywords }}" />
-  {% endif %} {% if page.screenshot %}
+  {% endif %} 
+  
+  {% if page.screenshot %}
   <meta property="og:image" content="{{ page.screenshot | absolute_url }}" />
   <meta name="twitter:image" content="{{ page.screenshot | absolute_url }}" />
   <meta name="twitter:image:alt" content="{{ page.title }}" />
