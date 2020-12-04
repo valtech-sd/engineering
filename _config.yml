@@ -2,5 +2,17 @@ permalink: /:title/
 collections:
   prototypes:
     output: true
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      scripts: "cookie.html"
+  -
+    scope:
+      path: ""
+      type: "prototypes"
+    values:
+      layout: "prototype"
 sass:
   style: compressed
