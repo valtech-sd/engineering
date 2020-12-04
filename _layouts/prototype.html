@@ -3,39 +3,60 @@ layout: default
 ---
 
 <div class="prototype">
-  <h2>{{ page.title }}</h2>
-  <p>{{ page.description }}</p>
-  
-  {% if page.prototype_url %}
-    <p><a href="{{ page.prototype_url }}">Try it now!</a></p>
-  {% endif %}
+  <div class="container">
+    <div class="col1">
+      <div class="row">
+        <p>
+          {{ page.category }} {% if page.license == "MIT" or page.license ==
+          "mit" %}
+
+          <a href="{{ page.repo_url }}">
+            <img src="/images/mit-badge.svg" height="20" />
+          </a>
+        </p>
+      </div>
+      {% endif %}
+      <h2>{{ page.title }}</h2>
+      <p>{{ page.description }}</p>
+      <div class="row">
+        {% if page.prototype_url %}
+        <a class="btn" href="{{ page.prototype_url }}">Try it on!</a>
+        {% endif %} {% if page.repo_url %}
+        <a class="btn" href="{{ page.repo_url }}">Github Repo</a>
+        {% endif %}
+        </div>
+    </div>
+    <div class="col2">  
+      <div class="borderText">
+        <!-- <div class="outerborder"></div> -->
+        <div class="verticalText">Return to all projects<div class="outerborder"></div></div>
+        
+      </div>
+    </div>
+  </div>
 
   {% if page.vimeo %}
-    <h3>Demo:</h3>
-    
-    <div class="resp-container">
-      <iframe class="resp-iframe" src="{{ page.vimeo }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
+  <div class="resp-container">
+    <iframe
+      class="resp-iframe"
+      src="{{ page.vimeo }}"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
+  </div>
   {% elsif page.demo %}
-    <h3>Demo:</h3>
-    <video controls>
-      <source src="{{ page.demo }} " type="video/mp4">
-    </video>
+  <video controls>
+    <source src="{{ page.demo }} " type="video/mp4" />
+  </video>
+
   {% elsif page.screenshot %}
-    <img src="{{ page.screenshot }}" />
-  {% endif %}
-
-  {% if page.repo_url %}
-    <div>
-      <h3>Repo:</h3><a href="{{ page.repo_url }}">{{ page.repo_url }}</a>
-    </div>
-  {% endif %}
-
-  {% if page.license == "MIT" or page.license == "mit" %}
-    <div>
-      <h3>License:</h3><a href="{{ page.repo_url }}"><img src="/images/mit-badge.svg"></a>
-    </div>
-  {% endif %}
-
-  {{ content }}
+  <img src="{{ page.screenshot }}" />
+  {% endif %} {% if page.prototype_url %}
+  <a class="btn btn2" href="{{ page.prototype_url }}">Try it on!</a>
+  {% endif %} 
+  <div class="other-content"> 
+    {{ content }}
+  </div>
+  
 </div>

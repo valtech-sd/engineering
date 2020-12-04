@@ -1,68 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#ffffff">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#ffffff" />
+
     <!-- facebook: https://developers.facebook.com/docs/sharing/webmasters -->
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:type" content="website" /> 
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ page.title }}" />
 
     <!-- twitter: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary -->
-    <meta name="twitter:card" content="summary_large_image" /> 
-    <meta name="twitter:site" content="@valtech" /> 
-    <meta name="twitter:creator" content="@valtech" /> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@valtech" />
+    <meta name="twitter:creator" content="@valtech" />
     <meta name="twitter:title" content="{{ page.title }}" />
 
     {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
-      <meta property="og:description" content="{{ page.description }}" /> 
-      <meta name="twitter:description" content="{{ page.description }}" /> 
-    {% endif %}
-
-    {% if page.keywords %}
-      <meta name="keywords" content="{{ page.keywords }}">
-    {% endif %}
-
-    {% if page.screenshot %}
-    <meta property="og:image" content="{{ page.screenshot | absolute_url }}" /> 
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+    {% endif %} {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% endif %} {% if page.screenshot %}
+    <meta property="og:image" content="{{ page.screenshot | absolute_url }}" />
     <meta name="twitter:image" content="{{ page.screenshot | absolute_url }}" />
     <meta name="twitter:image:alt" content="{{ page.title }}" />
     {% else %}
-    <meta property="og:image" content="{{ '/images/v-logo.jpg' | absolute_url }}" /> 
-    <meta name="twitter:image" content="{{ '/images/v-logo.jpg' | absolute_url }}" />
+    <meta
+      property="og:image"
+      content="{{ '/images/v-logo.jpg' | absolute_url }}"
+    />
+    <meta
+      name="twitter:image"
+      content="{{ '/images/v-logo.jpg' | absolute_url }}"
+    />
     <meta name="twitter:image:alt" content="{{ page.title }}" />
     {% endif %}
 
     <title>{{ page.title }}</title>
-    
-    <link rel="stylesheet" href="/css/sanitize.12.0.1.min.css">
-    <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/sanitize.12.0.1.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header class="site-header" tabindex="-1">
-      <h1><a href="{{ site.url }}">V_ Innovation</a></h1>
+      
+        <a href="http://localhost:4000" class="head-title">
+          valtech_<span class="head-title2">innovation</span></a>
+      
       <ul>
-        <li><a target="_blank" rel="noreferrer" href="https://www.valtech.com">Valtech.com</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://www.valtech.com/about/contact-us/">Contact Us</a></li>
+        <li>
+          <a class="head2 text-dt"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.valtech.com/about/contact-us/"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a class="head2" target="_blank" rel="noreferrer" href="https://www.valtech.com"
+            >Valtech.com</a
+          >
+        </li>
       </ul>
     </header>
-    <section class="site-content" tabindex="-1">
-      {{ content }}
-    </section>
+    <section class="site-content" tabindex="-1">{{ content }}</section>
 
-    {% if page.scripts %}
-      {% include {{ page.scripts }} %}
-    {% endif %}
+    {% if page.scripts %} {% include {{ page.scripts }} %} {% endif %}
+
+    <footer tabindex="-1">
+      <div class="container-foot ">
+        <div class=" foot col-a">
+          <h2><a  class="foot"href="https://www.valtech.com/innovation/">valtech_ </a></h2>
+          <p class="foot">Contact Us</p>
+          <p class="foot">Visit valtech.com</p>
+        </div>
+
+        <div class="col-b">
+          <p class="foot text-foot-u">Innovating, Testing and Scaling Our Client's Wildest Dreams</p>
+          <p class="foot text-foot-sm">Visit Our Innovation Program</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
