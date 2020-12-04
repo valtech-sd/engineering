@@ -74,8 +74,15 @@
       </div>
     </div>
   </div>
-  {% if page.scripts %} {% include {{ page.scripts }} %} {% endif %}
-  <input type="hidden" value="{{site.environment}}" id="site-env"/>
+  {% for script in page.scripts %}
+    {% include {{ script }} %} 
+  {% endfor %}
+
+  {% if jekyll.environment == "development" %}
+  <input type="hidden" value="development" id="site-env"/>
+  {% else %}
+  <input type="hidden" value="production" id="site-env"/>
+  {% endif %}
 </body>
 
 </html>

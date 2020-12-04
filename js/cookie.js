@@ -30,7 +30,7 @@ function checkCookies() {
 
 function createMarketoGAScript(){
   var env = document.getElementById("site-env").value;
-  if(env !=null && env == 'production'){
+  if(env != null && env != 'development'){
     var script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js?id=UA-97923818-10";
     script.async=true;
