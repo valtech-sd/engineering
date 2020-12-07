@@ -500,108 +500,43 @@ a.grid-item {
   width: 100%;
 }
 
-footer {
-  display: flex;
-  flex-flow: column wrap;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.5;
-  z-index: 700;
-  height: 295px;
-  margin-top: 64px;
-  margin-bottom: 0;
-
-  @media (min-width: 640px) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  a:visited {
-    color: white;
-    text-decoration: none;
-  }
-
-  .container-foot {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-self: flex-start;
-    flex-flow: row wrap;
-    margin: 81px 50px;
-    padding: 0;
-
-    .col-a {
-      // padding-left: 2rem;
-      font-size: 20px;
-      font-weight: 300;
-      h2 {
-        margin-top: 0;
-        margin-bottom: 37px;
-      }
-
-      p {
-        margin: 5px 0;
-      }
-    }
-
-    .col-b {
-      text-align: right;
-      margin: auto 0;
-      font-size: 20px;
-      max-width: 365px;
-    }
-    .text-foot-u {
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: underline;
-      margin: 0;
-    }
-    .text-foot-sm {
-      font-size: 16px;
-      font-weight: 300;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .container-foot {
-        height: 506px;
-        margin: 0;
-      }
-      .foot {
-        color: grey;
-        text-align: left;
-        width: 100%;
-        margin: none;
-        flex-wrap: wrap;
-      
-      }
-      .foot:nth-of-type(1) {
-        order: 5;
-      }
-      .foot:nth-of-type(2) {
-        order: 1;
-      }
-      .foot:nth-of-type(3) {
-        order: 2;
-      }
-      .foot:nth-of-type(4) {
-        order: 3;
-      }
-      .foot:nth-of-type(5) {
-        order: 4;
-      }
-    }
-    
-
-  }
+.Cookiepopupbox {
+  background-color: black;
+  position: fixed;
+  bottom: 0%;
+  z-index: 20;
+  width: 100%;
+  text-align: left;
+  padding: 1% 6%;
+  left: 0px;
 }
+.adapc {
+  font-size: 16px;
+  color: white !important;
+  letter-spacing: 0;
+}
+.cookiepopup{
+  display: none; 
+  border: 1px solid;
+}
+.acceptbtn{
+  margin-left:1%; 
+  color: white;  
+  border: solid 2px white;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.privlink{
+  color: #00c8ff;
+  text-decoration: underline;
+  }
+
