@@ -24,39 +24,45 @@ layout: default
         {% endif %} {% if page.repo_url %}
         <a class="btn" href="{{ page.repo_url }}">Github Repo</a>
         {% endif %}
-        </div>
+      </div>
     </div>
-    <div class="col2">  
+    <div class="col2">
       <div class="borderText">
-        <div class="verticalText">Return to all projects
+        <div class="verticalText">
+          Return to all projects
           <div class="outerborder"></div>
-        
+        </div>
       </div>
     </div>
   </div>
+    <section>
+      {% if page.vimeo %}
+      <div class="resp-container">
+        <div class="vimeo">
+        <iframe
+          id="frames"
+          class="resp-iframe"
+          src="{{ page.vimeo }}"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+        </div>
+      </div>
+      {% elsif page.demo %}
+      <video controls>
+        <source src="{{ page.demo }} " type="video/mp4" />
+      </video>
 
-  {% if page.vimeo %}
-  <div class="resp-container">
-    <iframe
-      class="resp-iframe"
-      src="{{ page.vimeo }}"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
-  </div>
-  {% elsif page.demo %}
-  <video controls>
-    <source src="{{ page.demo }} " type="video/mp4" />
-  </video>
+      {% elsif page.screenshot %}
+      <img src="{{ page.screenshot }}" id="demos"/>
+      {% endif %} {% if page.prototype_url %}
+      <a class="btn btn2" href="{{ page.prototype_url }}">Try it on!</a>
+      {% endif %}
+    </section>
 
-  {% elsif page.screenshot %}
-  <img src="{{ page.screenshot }}" />
-  {% endif %} {% if page.prototype_url %}
-  <a class="btn btn2" href="{{ page.prototype_url }}">Try it on!</a>
-  {% endif %} 
-  <div class="other-content"> 
-    {{ content }}
+    <div class="other-content">
+      <p>{{ content }}</p>
+    </div>
   </div>
-  
 </div>

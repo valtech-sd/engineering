@@ -52,6 +52,8 @@ pre {
   white-space: normal !important;
 }
 
+// ****************************   HEADER  ***********************************
+
 .site-header {
   display: flex;
   // align-items: center;
@@ -127,6 +129,8 @@ pre {
   }
 }
 
+// ****************************   SITE  ***********************************
+
 .site-content {
   width: 100%;
   &:focus {
@@ -138,23 +142,24 @@ pre {
     flex-direction: row;
 
     .left {
-      margin: 2rem 4%;
-      width: 75%;
+      margin: 2rem 0 0 4%;
+      width: 90%;
     }
     .right {
-      margin-top: -32px;
-      right: 0;
-      text-indent: -9999px;
-      width: 103px;
-      height: 153px;
+      // text-indent: -9999px;
+      margin-top: 0px;
       background: url(../images/strikes-02.svg) no-repeat;
+      position: absolute;
+      min-height: 153px;
+      min-width: 103px;
+      right: 0;
+      top: 75px;
     }
 
     h2 {
       text-transform: capitalize;
       text-decoration: underline;
       font-size: 42px;
-      min-width: 375px;
       max-width: 100%;
     }
 
@@ -169,6 +174,12 @@ pre {
         font-size: 60px;
         font-weight: bold;
       }
+
+      .left {
+        margin: 2rem 0 0 50px;
+        width: 50%;
+      }
+
       .right {
         width: 344px;
         height: 308px;
@@ -286,28 +297,33 @@ a.grid-item {
   }
 }
 
+// ****************************   PROTOTYPE  ***********************************
+
 .prototype {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 4%;
 
   .container {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    height: 392px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .col1 {
     flex: 1;
-    min-width: 375px;
-    max-width: 630px;
+    width: 630px;
     align-self: flex-start;
-    margin: 0 20px;
   }
 
   .col2 {
     display: none;
+    flex: 0;
+    width: 68px;
+    margin-right: 0px;
+    justify-content: flex-end;
+    align-self: flex-end;
   }
 
   .borderText {
@@ -338,7 +354,7 @@ a.grid-item {
   div.row {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+
     margin-top: 32px;
     left: 0;
   }
@@ -357,9 +373,8 @@ a.grid-item {
   }
 
   p {
-    // min-width: 335px;
-    max-width: 630px;
-    margin-right: 20px;
+    margin: 0;
+    max-width: 100%;
   }
   .outerborder {
     margin: -10px;
@@ -369,12 +384,17 @@ a.grid-item {
     border-right: 1px solid #707070;
   }
 
+  #demos {
+    display: flex;
+    justify-content: center;
+    margin-top: 55%;
+  }
+
   video {
     min-width: 335px;
     width: 100%;
     height: auto;
     margin: 78px 0px 61px 0px;
-    padding-left: 20px;
   }
 
   a.btn {
@@ -391,7 +411,6 @@ a.grid-item {
 
   a.btn2 {
     width: 133px;
-    margin-left: 28px;
   }
 
   .btn:hover {
@@ -400,27 +419,43 @@ a.grid-item {
   }
 
   .resp-container {
-    width: 1239px;
+    width: 100%;
     margin: 63px 0;
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%;
+    // padding-top: 56.25%;
   }
 
   .resp-iframe {
-    position: absolute;
+    position: inherit;
     top: 0;
     left: 0;
-    width: 1239px;
+    width: 100%;
     height: 100%;
     border: 0;
   }
 
+  .vimeo {
+    position: relative;
+    position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  }
+
+  .vimeo iframe,
+.vimeo object,
+.vimeo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
   .other-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 50px;
+    margin: auto;
     margin-bottom: 3rem;
     max-width: 100%;
     p {
@@ -430,26 +465,36 @@ a.grid-item {
     }
   }
 
-  @media (min-width: 1200px) {
-    .prototype {
-      margin: 70px 50px 0 50px;
-    }
-    .col1 {
-      margin: 0;
-    }
-    .col2 {
-      display: block;
-      flex: 0;
-      width: 68px;
-      margin-right: 50px;
-      justify-content: flex-end;
-      align-self: flex-end;
-    }
-    .btn2 {
-      margin-left: 50px;
+  @media (min-width: 768px) {
+
+      .col2 {
+        display: block;
+        flex: 0;
+        width: 68px;
+        justify-content: flex-end;
+        align-self: flex-end;
+      }
+      .btn2 {
+        margin-left: 50px;
+      }
+      p {
+        max-width: 630px;
+      }
+      #demos {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+      }
+
+      .resp-iframe {
+        position: absolute;
+        padding: 0;
+      }
     }
   }
-}
+
+
+// ****************************   GRID  ***********************************
 
 .grid {
   margin: 0 4%;
@@ -519,7 +564,13 @@ a.grid-item {
 .grid-item video {
   display: block;
   width: 100%;
+  
 }
+
+// img {
+//   object-fit: contain;
+// }
+// ****************************   COOKIES  ***********************************
 
 .Cookiepopupbox {
   background-color: black;
@@ -559,7 +610,7 @@ a.grid-item {
   color: #00c8ff;
   text-decoration: underline;
 }
-
+// ****************************   FOOTER  ***********************************
 footer {
   display: flex;
   flex-direction: row;
@@ -585,8 +636,9 @@ footer {
       text-decoration: none;
     }
   }
+
   .container-foot {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -595,20 +647,27 @@ footer {
     margin-left: 81px;
 
     .col-a h2 {
-      display: none;
+      visibility: hidden;
     }
 
     .col-b {
       padding: 0 2rem 20px 0;
       margin: auto 0;
       font-size: 20px;
+      max-width: 100%;
     }
     .text-foot-u {
       font-size: 24px;
       font-weight: bold;
       text-decoration: underline;
       margin: 0;
+      padding-top: 89px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
     }
+
     .text-foot-sm {
       font-size: 16px;
       font-weight: 300;
@@ -622,52 +681,74 @@ footer {
       overflow-wrap: anywhere;
     }
     #foot-desk {
-      display: none;
+      visibility: hidden;
       text-align: left;
-      padding: 95px 0 45px 0;
+      // padding: 95px 0 45px 0;
     }
 
     #foot-mobile {
-      display: block;
+      visibility: visible;
     }
-  }
 
-  @media (min-width: 769px) {
-    footer {
-      flex-direction: column;
-      flex-direction: row;
-      // align-items: center;
-      justify-content: space-between;
-
-      .container-foot {
-        height: 296px;
-        margin: 0 50px;
+    @media (min-width: 769px) {
+      footer {
+        max-height: 295px !important;
+        margin: 0;
+        padding: 0 !important;
       }
-
+      .container-foot {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        flex: 1;
+        margin-left: 50px;
+      }
       .col-a {
         font-size: 20px;
         font-weight: 300;
-        padding: 41px 0 89px;
-        display: block;
-        padding-left: 2rem;
 
         h2 {
           margin-top: 0;
           margin-bottom: 37px;
         }
+
+        p {
+          margin: 5px 0;
+        }
+      }
+      #foot-desk {
+        visibility: visible;
+      }
+
+      #foot-mobile {
+        visibility: hidden;
       }
 
       .col-b {
         text-align: right;
-      }
+        // margin: 99.5px 0;
+        height: 295px;
+        align-self: auto;
+        min-width: 350px;
+        max-width: 400px;
+        padding-right: 102px;
 
-      #foot-desk {
-        display: block !important;
-        color: white;
-      }
-
-      #foot-mobile {
-        display: none;
+        .text-foot-u {
+          font-size: 24px;
+          font-weight: bold;
+          text-decoration: underline;
+          margin: 0;
+          align-self: end;
+        }
+        .text-foot-sm {
+          font-size: 16px;
+          font-weight: 300;
+          margin-top: 20px;
+          padding: 0;
+        }
       }
     }
   }
