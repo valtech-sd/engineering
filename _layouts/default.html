@@ -1,110 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#000000" />
-  <meta name="msapplication-TileColor" content="#000000" />
-  <meta name="theme-color" content="#ffffff" />
+    <!-- facebook: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title }}" />
 
-  <!-- facebook: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ page.title }}" />
+    <!-- twitter: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@valtech" />
+    <meta name="twitter:creator" content="@valtech" />
+    <meta name="twitter:title" content="{{ page.title }}" />
 
-  <!-- twitter: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@valtech" />
-  <meta name="twitter:creator" content="@valtech" />
-  <meta name="twitter:title" content="{{ page.title }}" />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+    {% endif %} {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% endif %} {% if page.screenshot %}
+    <meta property="og:image" content="{{ page.screenshot | absolute_url }}" />
+    <meta name="twitter:image" content="{{ page.screenshot | absolute_url }}" />
+    <meta name="twitter:image:alt" content="{{ page.title }}" />
+    {% else %}
+    <meta
+      property="og:image"
+      content="{{ '/images/v-logo.jpg' | absolute_url }}"
+    />
+    <meta
+      name="twitter:image"
+      content="{{ '/images/v-logo.jpg' | absolute_url }}"
+    />
+    <meta name="twitter:image:alt" content="{{ page.title }}" />
+    {% endif %}
 
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
-  {% endif %} 
-  
-  {% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords }}" />
-  {% endif %} 
-  
-  {% if page.screenshot %}
-  <meta property="og:image" content="{{ page.screenshot | absolute_url }}" />
-  <meta name="twitter:image" content="{{ page.screenshot | absolute_url }}" />
-  <meta name="twitter:image:alt" content="{{ page.title }}" />
-  {% else %}
-  <meta property="og:image" content="{{ '/images/v-logo.jpg' | absolute_url }}" />
-  <meta name="twitter:image" content="{{ '/images/v-logo.jpg' | absolute_url }}" />
-  <meta name="twitter:image:alt" content="{{ page.title }}" />
-  {% endif %}
+    <title>{{ page.title }}</title>
 
-  <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/sanitize.12.0.1.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="/css/sanitize.12.0.1.min.css" />
-  <link rel="stylesheet" href="/css/style.css" />  
-</head>
-
-<body onload="checkCookies()">
-  <header class="site-header" tabindex="-1">
-    <h2><a href="{{ site.url }}"class="head head-title">
-      valtech_<span class="head head-title2">innovation</span></a></h2>
-    <ul>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://www.valtech.com/about/contact-us/" class="head2 text-dt">Contact Us</a>
-      </li>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://www.valtech.com" class="head2" >Valtech.com</a>
-      </li>
-      
-    </ul>
-  </header>
-  <section class="site-content" tabindex="-1">{{ content }}</section>
-  <div id="cookiewrapper" class="cookiepopup">
-    <div class="Cookiepopupbox">
-      <div>
-        <p class="adapc">
-          This website may use cookies in order to improve user experience.
-          For more information on how we use cookies, please visit our
-          <a href="https://www.valtech.com/cookie-statement/" title="Cookie Statement" target="_blank"
-            class="privlink">Cookie Statement.</a>
-          By closing this box or continuing to browse the site, you accept our
-          use of such cookies.
-          <a class="btn btn-outline-success acceptbtn" onclick="setCookie('true')">Accept cookies</a>
-        </p>
+  <body onload="checkCookies()">
+    <header class="site-header" tabindex="-1">
+      <h2>
+        <a href="{{ site.url }}" class="head head-title">
+          valtech_<span class="head head-title2">innovation</span></a
+        >
+      </h2>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.valtech.com/about/contact-us/"
+            class="head2 text-dt"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.valtech.com"
+            class="head2"
+            >Valtech.com</a
+          >
+        </li>
+      </ul>
+    </header>
+    <section class="site-content" tabindex="-1">{{ content }}</section>
+    <div id="cookiewrapper" class="cookiepopup">
+      <div class="Cookiepopupbox">
+        <div>
+          <p class="adapc">
+            This website may use cookies in order to improve user experience.
+            For more information on how we use cookies, please visit our
+            <a
+              href="https://www.valtech.com/cookie-statement/"
+              title="Cookie Statement"
+              target="_blank"
+              class="privlink"
+              >Cookie Statement.</a
+            >
+            By closing this box or continuing to browse the site, you accept our
+            use of such cookies.
+            <a
+              class="btn btn-outline-success acceptbtn"
+              onclick="setCookie('true')"
+              >Accept cookies</a
+            >
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  {% for script in page.scripts %}
-    {% include {{ script }} %} 
-  {% endfor %}
+    {% for script in page.scripts %} {% include {{ script }} %} {% endfor %} {%
+    if jekyll.environment == "development" %}
+    <input type="hidden" value="development" id="site-env" />
+    {% else %}
+    <input type="hidden" value="production" id="site-env" />
+    {% endif %}
 
-  {% if jekyll.environment == "development" %}
-  <input type="hidden" value="development" id="site-env"/>
-  {% else %}
-  <input type="hidden" value="production" id="site-env"/>
-  {% endif %}
+    <footer tabindex="-1">
+      <div class="container-foot">
+        <div class="foot col-a">
+          <h2>
+            <a
+              id="foot-desk"
+              class="foot"
+              href="https://www.valtech.com/innovation/"
+              >valtech_
+            </a>
+          </h2>
+          <p class="foot">Contact Us</p>
+          <p class="foot">Visit valtech.com</p>
+        </div>
 
-  <footer tabindex="-1">
-    <div class="container-foot ">
-      <div class=" foot col-a">
-        <h2><a id="foot-desk" class="foot" href="https://www.valtech.com/innovation/">valtech_ </a></h2>
-        <p class="foot">Contact Us</p>
-        <p class="foot">Visit valtech.com</p>
+        <div class="col-b">
+          <p class="foot text-foot-u">
+            Innovating, Testing and Scaling Our Client's Wildest Dreams
+          </p>
+          <p class="foot text-foot-sm">Visit Our Innovation Program</p>
+          <h2>
+            <a
+              id="foot-mobile"
+              class="foot"
+              href="https://www.valtech.com/innovation/"
+              >valtech_
+            </a>
+          </h2>
+        </div>
       </div>
-
-      <div class="col-b">
-        <p class="foot text-foot-u">Innovating, Testing and Scaling Our Client's Wildest Dreams</p>
-        <p class="foot text-foot-sm">Visit Our Innovation Program</p>
-        <h2><a id="foot-mobile" class="foot" href="https://www.valtech.com/innovation/">valtech_ </a></h2>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

@@ -7,20 +7,22 @@ layout: default
     <div class="col1">
       <div class="row">
         <p>
-          {{ page.category }} {% if page.license == "MIT" or page.license ==
-          "mit" %}
+          {{ page.category }} 
+          
+          {% if page.license == "MIT" or page.license == "mit" %}
 
           <a href="{{ page.repo_url }}">
             <img src="/images/mit-badge.svg" height="20" />
           </a>
+          {% endif %}
         </p>
       </div>
-      {% endif %}
+      
       <h2>{{ page.title }}</h2>
       <p>{{ page.description }}</p>
       <div class="row">
         {% if page.prototype_url %}
-        <a class="btn" href="{{ page.prototype_url }}">Try it on!</a>
+        <a class="btn" href="{{ page.prototype_url }}">Try it!</a>
         {% endif %} {% if page.repo_url %}
         <a class="btn" href="{{ page.repo_url }}">Github Repo</a>
         {% endif %}
@@ -29,7 +31,7 @@ layout: default
     <div class="col2">
       <div class="borderText">
         <div class="verticalText">
-          Return to all projects
+          <a href="{{ site.url }}" class="verticalText">Return to all projects</a>
           <div class="outerborder"></div>
         </div>
       </div>
@@ -56,8 +58,6 @@ layout: default
 
       {% elsif page.screenshot %}
       <img src="{{ page.screenshot }}" id="demos"/>
-      {% endif %} {% if page.prototype_url %}
-      <a class="btn btn2" href="{{ page.prototype_url }}">Try it on!</a>
       {% endif %}
     </section>
 
