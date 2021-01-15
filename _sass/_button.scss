@@ -1,0 +1,20 @@
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: $blue;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 14px 30px;
+  transition: all 0.3s;
+  margin-right: 1em;
+
+  &:visited {
+    color: white;
+  }
+}
+
+.btn:hover {
+  background-color: #000;
+  text-decoration: none;
+}

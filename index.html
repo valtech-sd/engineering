@@ -3,40 +3,52 @@ title: v_ innovation
 layout: default
 description: "Now, more than ever, is the time to start experimenting and using our imagination as guidance. The world is constantly evolving, and new possibilities arise endlessly to those who look for them. On this site you'll find all of the sketches, design ideas, proof of concepts, and working experiments we are exploring."
 keywords: 'engineering, research and development, prototypes, proof of concepts, poc, open source'
-scripts: ["grid_scripts.html", "cookie.html"]
+scripts: ['grid_scripts.html', 'cookie.html']
 ---
 
-<section class="site-content" tabindex="-1">
-  <section class="intro">
-    <div class="left">
-      <h2>Innovation Starts With Experimentation</h2>
-      <p>Now, more than ever, is the time to start experimenting and using our imagination as guidance. The world is constantly evolving, and new possibilities arise endlessly to those who look for them. On this site you'll find all of the sketches, design ideas, proof of concepts, and working experiments we are exploring.</p>        
-    </div>
-    <div class="right">
-
-    </div>
-  </section>
+<section class="intro">
+  <div class="left">
+    <h2>Innovation Starts With Experimentation</h2>
+    <p>
+      Now, more than ever, is the time to start experimenting and using our
+      imagination as guidance. The world is constantly evolving, and new
+      possibilities arise endlessly to those who look for them. On this site
+      you'll find all of the sketches, design ideas, proof of concepts, and
+      working experiments we are exploring.
+    </p>
+  </div>
+  <div class="right"></div>
+</section>
 <div class="grid">
   <div class="grid-col grid-col--1"></div>
   <div class="grid-col grid-col--2"></div>
   <div class="grid-col grid-col--3"></div>
   <div class="grid-col grid-col--4"></div>
 
-  {% assign prototypes = site.prototypes | sort: 'featured' | reverse %}
-  {% for prototype in prototypes %}
-    <a class="grid-item" href="{{ prototype.url }}" tabindex="0">
-      <span class="sr-only">{{ prototype.title }}</span>
-      {% if prototype.grid_video and prototype.screenshot %}
-        <video muted loop playsinline poster="{{ prototype.screenshot }}" src="{{ prototype.grid_video }}"></video>
-      {% elsif prototype.screenshot %}
-        <img src="{{ prototype.screenshot }}" alt="{{ prototype.title }} prototype">
-      {% else %}
-        <h2>{{ prototype.title }}</h2>
-      {% endif %}
-      <div class="overlay">
-        <p>{{ prototype.category }}</p>
-        <h2>{{ prototype.title }}</h2>
-      </div>
-    </a>
+  {% assign prototypes = site.prototypes | sort: 'featured' | reverse %} {% for
+  prototype in prototypes %}
+  <a class="grid-item" href="{{ prototype.url }}" tabindex="0">
+    <span class="sr-only">{{ prototype.title }}</span>
+    {% if prototype.grid_video and prototype.screenshot %}
+    <video
+      muted
+      loop
+      playsinline
+      poster="{{ prototype.screenshot }}"
+      src="{{ prototype.grid_video }}"
+    ></video>
+    {% elsif prototype.screenshot %}
+    <img
+      src="{{ prototype.screenshot }}"
+      alt="{{ prototype.title }} prototype"
+    />
+    {% else %}
+    <h2>{{ prototype.title }}</h2>
+    {% endif %}
+    <div class="overlay">
+      <p>{{ prototype.category }}</p>
+      <h2>{{ prototype.title }}</h2>
+    </div>
+  </a>
   {% endfor %}
 </div>

@@ -5,21 +5,20 @@ layout: default
 <div class="prototype">
   <div class="container">
     <div class="col1">
-      <div class="row">
-        <p>
-          {{ page.category }} 
-          
-          {% if page.license == "MIT" or page.license == "mit" %}
+      <div class="top">
+        <div class="category">{{ page.category }}</div>
 
-          <a href="{{ page.repo_url }}">
-            <img src="/images/mit-badge.svg" height="20" />
-          </a>
-          {% endif %}
-        </p>
+        {% if page.license == "MIT" or page.license == "mit" %}
+        <a href="{{ page.repo_url }}">
+          <img src="/images/mit-badge.svg" height="20" />
+        </a>
+        {% endif %}
       </div>
-      
+
       <h2>{{ page.title }}</h2>
+
       <p>{{ page.description }}</p>
+
       <div class="row">
         {% if page.prototype_url %}
         <a class="btn" href="{{ page.prototype_url }}">Try it!</a>
@@ -31,16 +30,19 @@ layout: default
     <div class="col2">
       <div class="borderText">
         <div class="verticalText">
-          <a href="{{ site.url }}" class="verticalText">Return to all projects</a>
+          <a href="{{ site.url }}" class="verticalText"
+            >Return to all projects</a
+          >
           <div class="outerborder"></div>
         </div>
       </div>
     </div>
   </div>
-    <section>
-      {% if page.vimeo %}
-      <div class="resp-container">
-        <div class="vimeo">
+  {{ content }}
+  <section>
+    {% if page.vimeo %}
+    <div class="resp-container">
+      <div class="vimeo">
         <iframe
           id="frames"
           class="resp-iframe"
@@ -49,20 +51,19 @@ layout: default
           allow="autoplay; fullscreen"
           allowfullscreen
         ></iframe>
-        </div>
       </div>
-      {% elsif page.demo %}
-      <video controls>
-        <source src="{{ page.demo }} " type="video/mp4" />
-      </video>
-
-      {% elsif page.screenshot %}
-      <img src="{{ page.screenshot }}" id="demos"/>
-      {% endif %}
-    </section>
-
-    <div class="other-content">
-      <p>{{ content }}</p>
     </div>
-  </div>
+    {% elsif page.demo %}
+    <video controls>
+      <source src="{{ page.demo }} " type="video/mp4" />
+    </video>
+    {% elsif page.screenshot %}
+    <img src="{{ page.screenshot }}" id="demos" />
+    {% endif %} {% if page.prototype_url and page.vimeo or page.demo or
+    page.screenshot %}
+    <div>
+      <a class="btn" href="{{ page.prototype_url }}">Try it!</a>
+    </div>
+    {% endif %}
+  </section>
 </div>
