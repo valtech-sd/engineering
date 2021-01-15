@@ -34,6 +34,12 @@
     flex: 0;
     margin-right: 0px;
     justify-content: flex-end;
+
+    @media (min-width: $md) {
+      display: block;
+      flex: 0;
+      justify-content: flex-end;
+    }
   }
 
   .borderText {
@@ -86,6 +92,10 @@
   p {
     margin: 0;
     max-width: 100%;
+
+    @media (min-width: $md) {
+      max-width: 630px;
+    }
   }
   .outerborder {
     margin: -10px;
@@ -99,6 +109,12 @@
     display: flex;
     justify-content: center;
     margin-top: 55%;
+
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: center;
+      margin: 5%;
+    }
   }
 
   video {
@@ -129,24 +145,5 @@
     overflow: hidden;
     margin: 63px 0;
     width: 100%;
-  }
-
-  @media (min-width: $md) {
-    .col2 {
-      display: block;
-      flex: 0;
-      justify-content: flex-end;
-    }
-    .btn2 {
-      margin-left: 50px;
-    }
-    p {
-      max-width: 630px;
-    }
-    #demos {
-      display: flex;
-      justify-content: center;
-      margin: 5%;
-    }
   }
 }

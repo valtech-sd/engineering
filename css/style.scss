@@ -1,9 +1,8 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+# Front matter comment to ensure Jekyll transpiles this SASS to CSS
 ---
 
 @import 'variables';
-@import 'typography';
 @import 'button';
 @import 'header';
 @import 'prototype';
