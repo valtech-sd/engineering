@@ -108,7 +108,7 @@ a.grid-item {
     height: 100%;
     padding: 1rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
     z-index: 1;
     transition: all 250ms;
@@ -133,6 +133,14 @@ a.grid-item {
       position: absolute;
       top: 0;
       left: 1rem;
+    }
+
+    .description {
+      align-self: center;
+      -webkit-line-clamp: 4;
+      position: relative;
+      bottom: 0;
+      left: 0;
     }
   }
 
@@ -159,6 +167,22 @@ a.grid-item {
 
   @media (hover: hover) {
     &:hover {
+      & > h2 {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        filter: saturate(20%);
+      }
+    }
+
+    &:focus {
       & > h2 {
         opacity: 0;
         visibility: hidden;
