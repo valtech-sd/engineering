@@ -108,7 +108,7 @@ a.grid-item {
     height: 100%;
     padding: 1rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     z-index: 1;
     transition: all 250ms;
@@ -177,7 +177,7 @@ a.grid-item {
         visibility: visible;
       }
 
-      img {
+      img, video {
         filter: saturate(20%);
       }
     }
@@ -193,7 +193,7 @@ a.grid-item {
         visibility: visible;
       }
 
-      img {
+      img, video {
         filter: saturate(20%);
       }
     }
