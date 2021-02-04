@@ -102,10 +102,11 @@ a {
       margin-top: 0px;
       background: url(../images/strikes-02.svg) no-repeat;
       position: absolute;
-      min-height: 153px;
-      min-width: 103px;
+      height: 153px;
+      width: 103px;
       right: 0;
       top: 0;
+      overflow: hidden;
 
       @media (min-width: $xl) {
         width: 344px;
@@ -114,6 +115,17 @@ a {
         background-size: cover;
         background-repeat: no-repeat;
         right: 4%;
+      }
+
+      #lines {
+        background-color: #fff;
+        width: 164%;
+        height: 188%;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        position: relative;
+        top: -50%;
+        left: -50%;
       }
     }
 
