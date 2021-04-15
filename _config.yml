@@ -16,3 +16,9 @@ defaults:
       layout: "prototype"
 sass:
   style: compressed
+include: 
+  - __settings__.js
+  - __modules__.js
+  - __start__.js
+  - __loading__.js
+  - __game-scripts.js
