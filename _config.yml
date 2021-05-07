@@ -22,3 +22,5 @@ include:
   - __start__.js
   - __loading__.js
   - __game-scripts.js
+plugins:
+  - jekyll-redirect-from
